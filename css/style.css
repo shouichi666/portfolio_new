@@ -223,6 +223,7 @@ li {
 }
 
 .header__right-item .gnavi_child a {
+  font-size: 1.4rem;
   color: #111111;
   padding: 10px;
 }
@@ -268,7 +269,7 @@ li {
   -webkit-transform: translateY(-20%);
       -ms-transform: translateY(-20%);
           transform: translateY(-20%);
-  font-size: 1.9rem;
+  font-size: 1.4rem;
 }
 
 .main-visual__slide {
@@ -320,10 +321,10 @@ li {
 .main-visual__circle {
   position: absolute;
   z-index: 6;
-  top: -200px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
+  top: -175px;
+  right: 0px;
+  width: 350px;
+  height: 350px;
   background-color: #e0dddd;
   -webkit-box-shadow: #5e95b9 2px 2px 10px;
           box-shadow: #5e95b9 2px 2px 10px;
