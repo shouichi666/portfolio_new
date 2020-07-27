@@ -433,7 +433,7 @@ li {
 
 .about__profile-inner .img-wrapper {
   width: calc(100% / 3);
-  min-width: 300px;
+  max-width: 300px;
 }
 
 .about__profile-inner .img-wrapper__img-content {
@@ -853,7 +853,7 @@ li {
 
 @media screen and (max-width: 650px) {
   html {
-    font-size: 10px;
+    font-size: 8px;
   }
   * {
     font-size: 1.5rem;
@@ -867,8 +867,8 @@ li {
     z-index: 100;
     top: 15px;
     right: 15px;
-    width: 55px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
   }
   .header__sp-icon .border-wrap {
@@ -889,7 +889,7 @@ li {
   }
   .header__sp-icon .border-wrap .borders::before {
     position: absolute;
-    top: 30px;
+    top: 22px;
     left: 0px;
     content: '';
     width: 100%;
@@ -900,7 +900,7 @@ li {
   }
   .header__sp-icon .border-wrap .borders::after {
     position: absolute;
-    top: 58px;
+    top: 44px;
     left: 0px;
     content: '';
     width: 100%;
@@ -911,12 +911,12 @@ li {
   }
   .header__sp-icon.open .borders {
     border: #ffffff solid 1px;
-    height: 60px;
+    height: 45px;
     -webkit-transition: .3s;
     transition: .3s;
   }
   .header__sp-icon.open .borders::before {
-    top: 30px;
+    top: 22px;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -925,7 +925,7 @@ li {
     transition: .6s;
   }
   .header__sp-icon.open .borders::after {
-    top: 30px;
+    top: 22px;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -983,8 +983,8 @@ li {
   .main-visual__circle {
     top: -100px;
     right: -100px;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
   .about__profile-inner {
     display: -webkit-box;
@@ -1002,8 +1002,17 @@ li {
             transform: rotate(0deg);
     margin-bottom: 20px;
   }
+  .about__profile-inner .img-wrapper {
+    width: 100%;
+  }
+  .about__profile-inner .img-wrapper__img-content {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .about__profile-inner .self-introduction {
     width: 95%;
+    padding: 15px;
   }
   .about__skill-inner .content-heading {
     position: static;
