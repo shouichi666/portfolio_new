@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoichi</title>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./img"/>
+  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<!-- ヘッダー⇓ -->
+  <header class="header">
+    <article class="header__left-item">
+        <a class="header__logo" href="#">Shoichi Yokoyama.com</a>
+    </article>
+    <article class="header__right-item">
+        <ul class="gnavi">
+            <li class="gnavi_child"><a href="#">HOME</a></li>
+            <li class="gnavi_child"><a href="#about">ABOUT</a></li>
+            <li class="gnavi_child"><a href="#works">WORKS</a></li>
+            <!-- <li class="gnavi_child"><a href="">CONTACT</a></li> -->
+        </ul>
+      </article>
+      <div class="header__sp-icon">
+        <div class="border-wrap">
+          <span class="borders"></span>
+        </div>
+      </div>
+      <article class="header__sp-navi">
+            <ul class="sub-navi__navi">
+                <li class="sub-navi__child"><a href="#">HOME</a></li>
+                <li class="sub-navi__child"><a href="#about">ABOUT</a></li>
+                <li class="sub-navi__child"><a href="#works">WORKS</a></li>
+                <li class="sub-navi__child"><a href="">CONTACT</a></li>
+            </ul>
+    </article>
+  </header>
+<!-- メイン⇓ -->
+  <main class="main">
+    <section class="main-visual">
+      <p class="main-visual__text">ポートフォリオサイトを<br>ご覧いただき<br>ありがとうございます。<br>横山翔一と申します。<br>
+      このサイトは<strong>「シンプル」</strong>を<br>テーマにして制作しました。</p>
+      <div class="main-visual__slide">
+        <div class="slide-inner">
+          <img class="slide-img show" src="img/slide01.jpg" alt="bar1">
+          <img class="slide-img" src="img/slide02.jpg" alt="bar2">
+          <img class="slide-img" src="img/slide03.jpg" alt="bar3">
+        </div>
+      </div>
+      <div class="main-visual__circle"></div>
+      <div class="main-visual__box"></div>
+    </section>
+    <section id="about" class="about">
+        <div class="about__heading-container">
+            <h2 class="heading">ABOUT</h2>
+            <p class="sub-heading">私について</p>
+            <span class="inon"></span>
+        </div>
+        <div class="about__wrapper">
+              <div class="about__profile-inner">
+                  <h3 class="content-heading">Profile</h3>
+                  <div class="img-wrapper">
+                    <img class="img-wrapper__img-content" src="img/line_1127164462408378.jpg" alt="自分">
+                  </div>
+                  <p class="self-introduction">
+                    石川県出身。大阪府在住の27歳。座右の銘は『SIMPLE IS BEST』。<br>
+                    二年制の専門学校を卒業後、テーマパーク付近のホテルに就職。<br>
+                    現在はバーテンダーとして務めております。
+                    今後を生きていくうえで、今のスキルだけでは物足りない、成長したいと思いWeb制作の勉強を始めました。
+                  </p>
+              </div>
+              <div class="about__skill-inner">
+                <h3 class="content-heading">Skills</h3>
+                <div class="pr-container">
+                    <div class="pr-container__box">
+                      <i class="fas fa-book-reader"></i>
+                      <h4 class="heading">自ら進んで学習する</h4>
+                      <p class="text">何かを学ぶことが好きで、貪欲に知識を吸収します。知らないことを学ぶことは、人生を豊かにしてくれると感じております。</p>
+                    </div>
+                    <div class="pr-container__box">
+                      <i class="fas fa-running"></i>
+                      <h4 class="heading">継続する力</h4>
+                      <p class="text">日々の取り組みを習慣化し、自分の糧にしていく。自分の成長のために努力することが好きです。</p>
+                    </div>
+                  </div>
+                <div class="img-container">
+                    <div class="img-content">
+                      <p class="img-content__heading">HTML</p>
+                     <img class="skill-img" src="img/skill/html.png" alt="html">
+                    </div>
+                    <div class="img-content">
+                      <p class="img-content__heading">CSS</p>
+                     <img class="skill-img" src="img/skill/css.png" alt="css">
+                    </div>
+                    <div class="img-content">
+                      <p class="img-content__heading">SASS</p>
+                      <img class="skill-img" src="img/skill/scss.png" alt="scss">
+                    </div>
+                    <div class="img-content">
+                      <p class="img-content__heading">PHP</p>
+                      <img class="skill-img" src="img/skill/new-logo.png" alt="php">
+                    </div>
+                    <div class="img-content">
+                      <p class="img-content__heading">Wordpress</p>
+                     <img class="skill-img" src="img/skill/WordPress-Logo.png" alt="wordpress">
+                    </div>
+                    <div class="img-content">
+                      <p class="img-content__heading">jQuery</p>
+                      <img class="skill-img" src="img/skill/jquery.png" alt="jquery">
+                    </div>
+                    <div class="img-content">
+                      <p class="img-content__heading">Javascript</p>
+                      <img class="skill-img" src="img/skill/javascript.png" alt="javascript">
+                    </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section id="works" class="works">
+      <div class="works__heading-container">
+        <h2 class="heading">WORK</h2>
+        <p class="sub-heading">制作物</p>
+      </div>
+      <div class="works__wrapper">
+          <ul class="works__tab">
+            <li class="open">ALL</li>
+            <li>模写</li>
+            <li>オリジナル</li>
+          </ul>
+          <div class="works__tab-contents show">
+            <div class="tab-contents-box" data-target="modal01">
+              <img src="img/isaratop.png">
+            </div>
+            <div class="tab-contents-box" data-target="modal02">
+              <img src="img/localhost_wordpress_ (1).png">
+            </div>
+          </div>
+
+          <div class="works__tab-contents">
+            <div class="tab-contents-box" data-target="modal01">
+              <img src="img/isaratop.png">
+            </div>
+          </div>
+
+          <div class="works__tab-contents">
+            <div class="tab-contents-box" data-target="modal02">
+              <img src="img/localhost_wordpress_ (1).png">
+            </div>
+          </div>
+
+      </div>
+
+      <div class="works__modal" id="modal01">
+        <div class="modal-back">
+          <div class="modal-content">
+            <div class="modal-content__img-container">
+              <img src="img/isarafull.png">
+            </div>
+            <table class="modal-content__date">
+              <tr>
+                <th>制作物</th>
+                <td>iSara模写</td>
+              </tr>
+              <tr>
+                <th>制作期間</th>
+                <td>4日</td>
+              </tr>
+              <tr>
+                <th>使用言語</th>
+                <td>HTML,SCSS,jQuery</td>
+              </tr>
+            </table>
+            <div class="modal-content__close">
+              <div class="close-icon">
+                <span class="border"></span>
+                <span class="border"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="works__modal" id="modal02">
+        <div class="modal-back">
+          <div class="modal-content">
+            <div class="modal-content__img-container">
+              <img src="img/localhost_wordpress_ (1).png">
+            </div>
+            <table class="modal-content__date">
+              <tr>
+                <th>制作物</th>
+                <td>オリジナルテーマ</td>
+              </tr>
+              <tr>
+                <th>制作期間</th>
+                <td>10日</td>
+              </tr>
+              <tr>
+                <th>使用言語</th>
+                <td>HTML,SCSS,jQuery,WORDPLESS</td>
+              </tr>
+              <tr>
+                <th>リンク</th>
+                <td><a href="http://mmbookers.wp.xdomain.jp/">http://mmbookers.wp.xdomain.jp/</a></td>
+              </tr>
+            </table>
+            <div class="modal-content__close">
+              <div class="close-icon">
+                <span class="border"></span>
+                <span class="border"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="contact"></section>
+  </main>
+<!-- フッター⇓ -->
+  <footer class="footer">
+    <p>@Shoichi Yokoyama</p>
+  </footer>
+</body>
+</html>
