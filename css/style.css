@@ -145,6 +145,36 @@
   }
 }
 
+@-webkit-keyframes appearance {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   font-family: "Hannari";
   margin: 0;
@@ -186,6 +216,11 @@ a {
 
 li {
   list-style: none;
+}
+
+.active {
+  -webkit-animation: appearance 2s infinite;
+          animation: appearance 2s infinite;
 }
 
 /*ヘッダーここから*/
@@ -338,6 +373,7 @@ li {
 }
 
 .about__heading-container {
+  opacity: 0;
   margin: auto;
   margin-bottom: 25px;
   cursor: pointer;
@@ -549,9 +585,11 @@ li {
 .works {
   width: 90%;
   margin: auto;
+  margin-bottom: 50px;
 }
 
 .works__heading-container {
+  opacity: 0;
   margin-bottom: 25px;
   cursor: pointer;
 }
