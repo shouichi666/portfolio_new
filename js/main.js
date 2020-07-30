@@ -1,5 +1,4 @@
 // メインヴィジュアルスライダー
-
 $(function(){
   let imgTarget = $('.slide-img'); 
   let imgNum = imgTarget.length;
@@ -62,6 +61,7 @@ $(function(){
 
 
 });
+
 // タブ
 $(function(){
   const tab = $('.works__tab li');
@@ -74,6 +74,7 @@ $(function(){
     appearParts.eq(tabIndex).addClass('show');
   })
 });
+
 // モーダルウィンド
 $(function(){
   const clickOpen = $('.tab-contents-box');
@@ -90,6 +91,7 @@ $(function(){
     });
   });
 });
+
 // スクロールカラー変更
 $(function(){
   const changeText = $('.gnavi_child a');
@@ -110,6 +112,7 @@ $(function(){
   });
 
 });
+
 // spメニュー
 $(function(){
   const clickParts = $('.header__sp-icon');
@@ -125,7 +128,8 @@ $(function(){
     }
   });
 });
-/*ページ内リンクアニメーション*/
+
+// ページ内リンクアニメーション
 $(function(){
   $('a[href^="#"]').click(function() {
     // スクロールの速度
@@ -139,3 +143,19 @@ $(function(){
     return false;
    });
   });
+
+// スクロールフェードイン
+$(function(){
+  const target = $('.about__heading-container,.works__heading-container');
+
+  $(window).scroll(function(){
+    const wHeight = $(window).height();
+    const wTop = $(window).scrollTop();
+    target.each(function(){
+      const position = $(this).offset().top;
+      if(wTop > position - wHeight + 400){
+        target.addClass('active');
+      }
+    });
+  });
+});
