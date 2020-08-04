@@ -1,0 +1,82 @@
+@keyframes fadeIn{
+  0%{
+    opacity: 0.8;
+    transform: translateX(50px);
+  }
+  10%{
+    opacity: 0.9;
+    transform: translateX(0px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  95%{
+    opacity: 0.9;
+    transform: translateX(-40px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes changeColor{
+  0%{
+    background-color: #616161d3; 
+  }
+  20%{
+    background-color: #3f3f3fd3; 
+  }
+  40%{
+    background-color: #5c5c66d3; 
+  }
+  60%{
+    background-color: #160303d3; 
+  }
+  80%{
+    background-color: #f8fce9d3; 
+  }
+  100%{
+    background-color: #000000d3; 
+  }
+}
+
+@keyframes cyanglow{
+  0%{
+    text-shadow:#f4ffd5dc 30px -20px 10px;
+  }
+  10%{
+    text-shadow:#f4ffd5dc 30px -10px 0px;
+  }
+  20%{
+    text-shadow:#f4ffd5dc 20px 10px 0px;
+  }
+  45%{
+    text-shadow:#f4ffd5dc 0px 0px 20px;
+  }
+  67%{
+    text-shadow:#f4ffd5dc -10px 20px 1px;
+  }
+  78%{
+    text-shadow:#ffffff 0px 0px 110px;
+  }
+  100%{
+    text-shadow:#f4ffd5dc 0px 0px 20px;
+  }
+} 
+
+@keyframes appearance{
+  0%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 0.6;
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
