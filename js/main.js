@@ -153,7 +153,7 @@ $(function(){
     const wTop = $(window).scrollTop();
     target.each(function(){
       const position = $(this).offset().top;
-      if(wTop > position - wHeight + 400){
+      if(wTop > position - wHeight + 100){
         target.addClass('active');
       }
     });
