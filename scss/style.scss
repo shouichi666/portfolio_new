@@ -365,6 +365,7 @@ li{
   }
   &__tab-contents{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     visibility: hidden;
     height: 0px;
@@ -413,44 +414,50 @@ li{
       }
     .modal-content{
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
       overflow: hidden;
       height: 100%;
       &__img-container{
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 20px;
+        // transform: translateY(-50%);
         height: 70%;
+        width: 60%;
         max-width: 700px;
         overflow-y: auto;
         img{
-          object-fit: cover;
-          object-position: center;
           width: 100%;
           opacity: 0.9;
         }
       }
       &__date{
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        min-width: 350px;
-        height: 40%;
+        // position: absolute;
+        // top: 50%;
+        // right: 20px;
+        // transform: translateY(-50%);
+        width: 35%;
+        min-width: 300px;
         padding: 20px;
         border: 1px solid #e0dddd;
         box-shadow: #757575 2px 2px 10px;
         th{
           color: #dae4ffd8;
           text-align: center;
-          padding-right: 30px;
           font-size: 2.0rem;
-          text-shadow:  #757575 2px 3px 10px;;
+          text-shadow:  #757575 2px 3px 10px;
+          border-bottom: #757575 1px solid;
         }
         td{
+          height: 30px;
+          padding-bottom: 30px;
           color: #fafcffd8;
           font-size: 1.8rem;
           text-align: left;
+          text-align: center;
           font-family: $sp-font;
           a{
             text-decoration: underline;
@@ -681,17 +688,22 @@ li{
     }
     &__modal{
       .modal-content{
-        padding-top: 30px;
+        justify-content: center;
+        padding-top: 10px 0 0 0;
+        border: none;
         &__img-container{
-          top: 10px
-          height: 50%;
+          top: 10px;
+          width: 100%;
+          height: 40%;
         }
         &__date{
-          height: 50%;
+          padding-bottom: 10px;
+          width: 80%;
+          height: 30%;
         }
         &__close{
           top: 0px;
-          right: 0px;
+          left: 0px;
         }
       }
     }
