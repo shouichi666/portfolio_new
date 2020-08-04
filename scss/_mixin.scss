@@ -1,0 +1,10 @@
+@mixin  textGlow($color,$speasing) {
+  color: $color;
+  text-shadow: 0px 0px 20px $color;
+  letter-spacing: $speasing;
+  transition: .1s;
+}
+@mixin  Glow($color) {
+  color: $color;
+  animation: cyanglow 14s infinite;
+}
