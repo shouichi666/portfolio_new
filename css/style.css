@@ -771,20 +771,18 @@ li {
 
 .works__modal .modal-content {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   overflow: hidden;
   height: 100%;
 }
 
 .works__modal .modal-content__img-container {
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 70%;
   max-width: 700px;
   overflow-y: auto;
 }
@@ -799,6 +797,12 @@ li {
 }
 
 .works__modal .modal-content__date {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   min-width: 350px;
   height: 40%;
   padding: 20px;
@@ -891,10 +895,7 @@ li {
 
 @media screen and (max-width: 650px) {
   html {
-    font-size: 8px;
-  }
-  * {
-    font-size: 1.5rem;
+    font-size: 9px;
   }
   .header__right-item {
     display: none;
@@ -921,7 +922,7 @@ li {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #1f1f1f;
+    background-color: #cecece;
     -webkit-transition: .5s;
     transition: .5s;
   }
@@ -932,7 +933,7 @@ li {
     content: '';
     width: 100%;
     height: 2px;
-    background-color: #1f1f1f;
+    background-color: #cecece;
     -webkit-transition: .5s;
     transition: .5s;
   }
@@ -943,7 +944,7 @@ li {
     content: '';
     width: 100%;
     height: 2px;
-    background-color: #1f1f1f;
+    background-color: #cecece;
     -webkit-transition: .5s;
     transition: .5s;
   }
@@ -1080,13 +1081,13 @@ li {
     width: 90%;
   }
   .works__modal .modal-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding-top: 30px;
   }
   .works__modal .modal-content__img-container {
+    top: 10px;
+    height: 50%;
+  }
+  .works__modal .modal-content__date {
     height: 50%;
   }
   .works__modal .modal-content__close {
