@@ -114,7 +114,7 @@
     text-shadow: #f4ffd5dc -10px 20px 1px;
   }
   78% {
-    text-shadow: #ffffff 0px 0px 110px;
+    text-shadow: #ffffff 0px 0px 10px;
   }
   100% {
     text-shadow: #f4ffd5dc 0px 0px 20px;
@@ -138,7 +138,7 @@
     text-shadow: #f4ffd5dc -10px 20px 1px;
   }
   78% {
-    text-shadow: #ffffff 0px 0px 110px;
+    text-shadow: #ffffff 0px 0px 10px;
   }
   100% {
     text-shadow: #f4ffd5dc 0px 0px 20px;
@@ -321,25 +321,24 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: 100%;
 }
 
 .main-visual__slide .slide-img {
+  margin: 0;
   width: 100%;
   height: 100%;
-  display: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
 }
 
-.main-visual__slide .slide-img.show {
-  display: block;
-  position: absolute;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  -webkit-animation: fadeIn 11s infinite ease-in-out;
-          animation: fadeIn 11s infinite ease-in-out;
+.main-visual__slide .slide-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .main-visual__box {
@@ -358,8 +357,8 @@ li {
   z-index: 6;
   top: -175px;
   right: 0px;
-  width: 350px;
-  height: 350px;
+  width: 370px;
+  height: 370px;
   background-color: #e0dddd;
   -webkit-box-shadow: #5e95b9 2px 2px 10px;
           box-shadow: #5e95b9 2px 2px 10px;
@@ -481,7 +480,7 @@ li {
 }
 
 .about__profile-inner .self-introduction {
-  width: calc(100% / 2);
+  width: calc(100% / 1.7);
   padding: 30px;
   font-family: "Noto Serif JP", serif;
   font-size: 1.8rem;
@@ -585,7 +584,7 @@ li {
 .works {
   width: 90%;
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .works__heading-container {
@@ -883,6 +882,171 @@ li {
           transform: rotate(-45deg) translateY(50%);
 }
 
+.contact {
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+  /* 入力項目を見やすくする */
+  /* 必須項目の入力欄を黄色にする */
+  /* 送信ボタンを見やすくする */
+  /* エラーメッセージを見やすくする */
+}
+
+.contact__heading-container {
+  margin: auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.contact__heading-container .heading {
+  color: #5e95b9;
+  -webkit-animation: cyanglow 14s infinite;
+          animation: cyanglow 14s infinite;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__heading-container .sub-heading {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__heading-container:hover .heading {
+  color: cyan;
+  text-shadow: 0px 0px 20px cyan;
+  letter-spacing: 10px;
+  -webkit-transition: .1s;
+  transition: .1s;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__heading-container:hover .sub-heading {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__wrapper {
+  background-position: top;
+  padding-top: 10px;
+  height: 0px;
+  opacity: 0.1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  overflow: hidden;
+}
+
+.contact__wrapper.open {
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  overflow: hidden;
+}
+
+.contact__form {
+  width: 100%;
+  -webkit-box-shadow: #5e95b9 2px 3px 12px , #5e95b9 -2px -2px 12px;
+          box-shadow: #5e95b9 2px 3px 12px , #5e95b9 -2px -2px 12px;
+  padding: 40px;
+}
+
+.contact__form .text_wrap {
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.contact__form .text_wrap label {
+  color: #5e95b9;
+  text-shadow: 0px 0px 20px #5e95b9;
+  letter-spacing: 1px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.contact__form .text_wrap input, .contact__form .text_wrap textarea {
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  color: #1f1f1f;
+}
+
+.contact__form .text_wrap textarea {
+  height: 150px;
+}
+
+.contact__form .text_wrap input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+.contact__form .text_wrap input:-ms-input-placeholder {
+  text-align: left;
+}
+
+.contact__form .text_wrap input::-ms-input-placeholder {
+  text-align: left;
+}
+
+.contact__form .text_wrap input::placeholder {
+  text-align: left;
+}
+
+.contact__form .submit {
+  background-color: #5e95b9;
+  width: 280px;
+  padding: 10px 0;
+}
+
+.contact input.wpcf7-form-control.wpcf7-text,
+.contact textarea.wpcf7-form-control.wpcf7-textarea {
+  width: 100%;
+  padding: 8px 15px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: 1px solid #d0d5d8;
+  border-radius: 3px;
+}
+
+.contact textarea.wpcf7-form-control.wpcf7-textarea {
+  height: 200px;
+}
+
+.contact input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+  background: rgba(255, 255, 142, 0.46);
+}
+
+.contact input.wpcf7-submit {
+  width: 100%;
+  height: 80px;
+  background: #27c038;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact span.wpcf7-not-valid-tip,
+.contact .wpcf7-response-output.wpcf7-validation-errors {
+  color: red;
+  font-weight: 600;
+}
+
 /*フッターここから*/
 .footer {
   padding: 30px 0;
@@ -896,6 +1060,11 @@ li {
 @media screen and (max-width: 650px) {
   html {
     font-size: 9px;
+  }
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .header__right-item {
     display: none;
@@ -914,7 +1083,7 @@ li {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: none;
+    background-color: transparent;
   }
   .header__sp-icon .border-wrap .borders {
     position: absolute;
@@ -1084,7 +1253,7 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 10px 0 0 0;
+    padding-top: 10px;
     border: none;
   }
   .works__modal .modal-content__img-container {
