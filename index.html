@@ -25,7 +25,7 @@
             <li class="gnavi_child"><a href="#">HOME</a></li>
             <li class="gnavi_child"><a href="#about">ABOUT</a></li>
             <li class="gnavi_child"><a href="#works">WORKS</a></li>
-            <!-- <li class="gnavi_child"><a href="">CONTACT</a></li> -->
+            <li class="gnavi_child"><a href="#contact">CONTACT</a></li>
         </ul>
       </article>
       <div class="header__sp-icon">
@@ -38,7 +38,7 @@
                 <li class="sub-navi__child"><a href="#">HOME</a></li>
                 <li class="sub-navi__child"><a href="#about">ABOUT</a></li>
                 <li class="sub-navi__child"><a href="#works">WORKS</a></li>
-                <!-- <li class="sub-navi__child"><a href="">CONTACT</a></li> -->
+                <li class="sub-navi__child"><a href="#contact">CONTACT</a></li>
             </ul>
     </article>
   </header>
@@ -48,11 +48,11 @@
       <p class="main-visual__text">ポートフォリオサイトを<br>ご覧いただき<br>ありがとうございます。<br>横山翔一と申します。<br>
       このサイトは<strong>「シンプル」</strong>を<br>テーマにして制作しました。</p>
       <div class="main-visual__slide">
-        <div class="slide-inner">
-          <img class="slide-img show" src="img/slide01.jpg" alt="bar1">
-          <img class="slide-img" src="img/slide02.jpg" alt="bar2">
-          <img class="slide-img" src="img/slide03.jpg" alt="bar3">
-        </div>
+        <ul class="slide-inner">
+          <li class="slide-img"><img src="img/slide01.jpg" alt="bar1"></li>
+          <li class="slide-img"><img src="img/slide02.jpg" alt="bar2"></li>
+          <li class="slide-img"><img src="img/slide03.jpg" alt="bar3"></li>
+        </ul>
       </div>
       <div class="main-visual__circle"></div>
       <div class="main-visual__box"></div>
@@ -278,9 +278,35 @@
       </div>
 
     </section>
-    <section class="contact">
-
+    <section id="contact" class="contact">
+      <div class="contact__heading-container">
+        <h2 class="heading">CONTACT</h2>
+        <p class="sub-heading">お問い合わせ</p>
+      </div>
+      </div>
+      <div class="contact__wrapper">
+          <form class="contact__form" action ="#">
+            <div class="text_wrap">
+              <label for="name">名前</label><br>
+              <input id="name" type="text" placeholder="name">
+            </div>  
+            <div class="text_wrap">
+              <label for="tel">電話番号</label><br>
+              <input id="tel" type="tel" placeholder="000-0000-0000">
+            </div>  
+            <div class="text_wrap">
+              <label for="email">メールアドレス</label><br>
+              <input id="email" type="email" placeholder="aaaaaaaa@gmail.conn">
+            </div>
+            <div class="text_wrap">
+              <label for="email">お問い合わせ内容</label><br>
+              <textarea name="comment" placeholder="コメント"></textarea><br>
+            </div>
+            <input class="submit" type="submit" value="送信">
+          </form>
+      </div>
     </section>
+
   </main>
 <!-- フッター⇓ -->
   <footer class="footer">
