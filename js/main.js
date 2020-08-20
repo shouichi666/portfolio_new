@@ -1,28 +1,52 @@
 // メインヴィジュアルスライダー
+// $(function(){
+//   let imgTarget = $('.slide-img'); 
+//   let imgNum = imgTarget.length;
+//   let index = imgTarget.index();
+//   const slider = function(){
+//     if(index == (imgNum - 1)){
+//       imgTarget.eq(index).removeClass('show');
+//       index = 0;
+//       imgTarget.eq(index).addClass('show');
+//     }else{
+//       imgTarget.eq(index).removeClass('show');
+//       index++;
+//       imgTarget.eq(index).addClass('show');
+//     }
+//   }
+//   setInterval(slider,11000);
+// });
 $(function(){
-  let imgTarget = $('.slide-img'); 
-  let imgNum = imgTarget.length;
-  let index = imgTarget.index();
-  const slider = function(){
-    if(index == (imgNum - 1)){
-      imgTarget.eq(index).removeClass('show');
-      index = 0;
-      imgTarget.eq(index).addClass('show');
-    }else{
-      imgTarget.eq(index).removeClass('show');
-      index++;
-      imgTarget.eq(index).addClass('show');
-    }
-  }
-  setInterval(slider,11000);
+  const target = $('.slide-img img');
+  let wrapper =$('.slide-inner');
+  const targetCount = target.length;
+  
+  let slider = setInterval ( function() {
+      
+      let targetWidth = target.height();
+      let innerWidth =wrapper.height();
+      let firstTarget = $('.slide-img img:first');
+      let firstTargetW = firstTarget.height();
+      let firstClone = $(".slide-img img:first").clone(true);
+      
+      wrapper.animate( { 'margin-top' :  -firstTargetW * 2} , 
+                          { duration : 2000 , 
+                            complete : function(){
+                              firstTarget.remove(),
+                              firstClone.clone(true).insertAfter( $(".slide-img img:last")); 
+                        }
+                      });
+    }, 10000 );
 });
 
 // アコーディオン
 $(function(){
  const abClickTarget = $('.about__heading-container ,a[href^="#about"]');
  const woClickTarget = $('.works__heading-container,a[href^="#works"]');
+ const coClickTarget = $('.contact__heading-container,a[href^="#contact"]');
  const abOpenTarget = $('.about__wrapper');
  const woOpenTarget = $('.works__wrapper');
+ const coOpenTarget = $('.contact__wrapper');
  
   abClickTarget.on('click',function(){
 
@@ -57,6 +81,23 @@ $(function(){
     }else if(woOpenTarget.not('open')){
       $('.main').css('background-color','#111111');
     }
+  });
+
+  coClickTarget.on('click',function(){
+    if(coOpenTarget.hasClass('open')){
+      coOpenTarget.removeClass('open');
+    }else if(abOpenTarget.hasClass('open')){
+      abOpenTarget.removeClass('open');
+      coOpenTarget.addClass('open');
+    }else{
+      coOpenTarget.addClass('open');
+    }
+
+    // if(coOpenTarget.hasClass('open')){
+    //   $('.main').css('background-color','#A9A9A9');
+    // }else if(coOpenTarget.not('open')){
+    //   $('.main').css('background-color','#111111');
+    // }
   });
 
 
